@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DE4YOU Hosting Solutions - Paket Hosting Terbaik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --success: #00b894;
+            --warning: #fdcb6e;
+            --danger: #d63031;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            animation: pulse 8s infinite linear;
+        }
+        
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .highlight {
+            background-color: #ffeaa7;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            width: 280px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .pricing-card.popular {
+            border: 3px solid var(--primary);
+            position: relative;
+        }
+        
+        .popular-tag {
+            position: absolute;
+            top: 15px;
+            right: -40px;
+            background-color: var(--primary);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .pricing-header {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .pricing-header .price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .pricing-header .duration {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .pricing-features {
+            padding: 20px;
+        }
+        
+        .pricing-features ul {
+            list-style: none;
+        }
+        
+        .pricing-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        .pricing-footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+        }
+        
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(108, 92, 231, 0.4);
+        }
+        
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+        }
+        
+        .features-section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .features-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .feature-card i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .feature-card:hover i {
+            color: white;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 10px;
+        }
+        
+        .testimonials {
+            margin-bottom: 40px;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 4rem;
+            color: rgba(108, 92, 231, 0.1);
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: var(--dark);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .whatsapp-channel {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(37, 211, 102, 0.1);
+            border-radius: 8px;
+            display: inline-block;
+        }
+        
+        .whatsapp-channel a {
+            color: #25D366;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pricing-card {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DE4YOU Hosting Solutions</h1>
+            <p>Solusi hosting terbaik dengan harga terjangkau! Dapatkan panel hosting eksklusif dengan fitur lengkap untuk kebutuhan bisnis online Anda.</p>
+        </header>
+        
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>ADMIN PANEL</h3>
+                    <div class="price">Rp15K</div>
+                    <div class="duration">TANPA IKLAN PUB/PRIV</div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Akses penuh ke panel</li>
+                        <li><i class="fas fa-check"></i> Tanpa iklan mengganggu</li>
+                        <li><i class="fas fa-check"></i> Manajemen pengguna</li>
+                        <li><i class="fas fa-check"></i> Monitoring resource</li>
+                        <li><i class="fas fa-check"></i> Dukungan teknis</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="https://wa.me/6287778002663?text=Saya%20tertarik%20untuk%20membeli%20ADMIN%20PANEL%2015K" class="btn whatsapp-btn btn-block">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card popular">
+                <div class="popular-tag">POPULER</div>
+                <div class="pricing-header">
+                    <h3>RESELLER PANEL PUB</h3>
+                    <div class="price">Rp5K</div>
+                    <div class="duration">PER BULAN</div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Panel publik</li>
+                        <li><i class="fas fa-check"></i> Harga terjangkau</li>
+                        <li><i class="fas fa-check"></i> Cocok untuk pemula</li>
+                        <li><i class="fas fa-check"></i> Manajemen reseller</li>
+                        <li><i class="fas fa-check"></i> Dukungan dasar</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="https://wa.me/6287778002663?text=Saya%20tertarik%20untuk%20membeli%20RESELLER%20PANEL%20PUB%205K" class="btn whatsapp-btn btn-block">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>RESELLER PANEL PRIV</h3>
+                    <div class="price">Rp10K</div>
+                    <div class="duration">PER BULAN</div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Panel privat</li>
+                        <li><i class="fas fa-check"></i> Lebih eksklusif</li>
+                        <li><i class="fas fa-check"></i> Branding sendiri</li>
+                        <li><i class="fas fa-check"></i> Fitur lengkap</li>
+                        <li><i class="fas fa-check"></i> Prioritas dukungan</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="https://wa.me/6287778002663?text=Saya%20tertarik%20untuk%20membeli%20RESELLER%20PANEL%20PRIV%2010K" class="btn whatsapp-btn btn-block">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>PATNER PANEL</h3>
+                    <div class="price">Rp40K</div>
+                    <div class="duration">PERMANEN</div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Akses permanen</li>
+                        <li><i class="fas fa-check"></i> Panel eksklusif</li>
+                        <li><i class="fas fa-check"></i> Prioritas tinggi</li>
+                        <li><i class="fas fa-check"></i> Branding custom</li>
+                        <li><i class="fas fa-check"></i> Dukungan 24/7</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="https://wa.me/6287778002663?text=Saya%20tertarik%20untuk%20membeli%20PATNER%20PANEL%2040K" class="btn whatsapp-btn btn-block">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>OWNER PANEL</h3>
+                    <div class="price">Rp55K</div>
+                    <div class="duration">PERMANEN</div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Akses seumur hidup</li>
+                        <li><i class="fas fa-check"></i> Panel paling eksklusif</li>
+                        <li><i class="fas fa-check"></i> Fitur premium</li>
+                        <li><i class="fas fa-check"></i> Dukungan VIP</li>
+                        <li><i class="fas fa-check"></i> Custom request</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="https://wa.me/6287778002663?text=Saya%20tertarik%20untuk%20membeli%20OWNER%20PANEL%2055K" class="btn whatsapp-btn btn-block">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features-section">
+            <h2>Keunggulan Layanan Kami</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Cepat & Stabil</h3>
+                    <p>Server kami menggunakan teknologi terbaru untuk memastikan kecepatan dan stabilitas maksimal.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Keamanan Tinggi</h3>
+                    <p>Sistem keamanan berlapis melindungi data dan aplikasi Anda dari berbagai ancaman.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Dukungan 24/7</h3>
+                    <p>Tim support kami siap membantu Anda kapan saja melalui berbagai channel komunikasi.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-sliders-h"></i>
+                    <h3>Kontrol Penuh</h3>
+                    <p>Anda memiliki kendali penuh atas panel hosting dengan antarmuka yang mudah digunakan.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonials">
+            <h2>Apa Kata Pelanggan Kami</h2>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>Sangat puas dengan panel hosting dari DE4YOU. Fiturnya lengkap dan harganya terjangkau. Dukungan teknisnya juga cepat merespon.</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer">
+                    <div class="author-info">
+                        <h4>Budi Santoso</h4>
+                        <p>Pemilik Bisnis Online</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>Sejak pakai reseller panel dari DE4YOU, bisnis hosting saya berkembang pesat. Panelnya mudah digunakan dan tidak ada masalah.</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
+                    <div class="author-info">
+                        <h4>Siti Rahayu</h4>
+                        <p>Reseller Hosting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Siap Meningkatkan Bisnis Online Anda?</h2>
+            <p>Dapatkan panel hosting terbaik dengan harga spesial sekarang juga! Hubungi kami untuk konsultasi gratis.</p>
+            <a href="https://wa.me/6287778002663" class="btn whatsapp-btn"><i class="fab fa-whatsapp"></i> Hubungi via WhatsApp</a>
+        </div>
+        
+        <footer>
+            <h3>DE4YOU Hosting Solutions</h3>
+            <p>Solusi hosting profesional untuk kebutuhan bisnis Anda</p>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            
+            <div class="whatsapp-channel">
+                <p>Join channel WhatsApp kami: <a href="https://whatsapp.com/channel/0029Vb0QWsE8vd1UjhCjQO2V">DE4YOU Hosting Updates</a></p>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 DE4YOU YT. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
